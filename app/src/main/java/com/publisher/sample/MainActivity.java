@@ -1,14 +1,13 @@
 package com.publisher.sample;
 
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 
 import com.vungle.publisher.VungleAdEventListener;
 import com.vungle.publisher.VungleInitListener;
@@ -24,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private Button[] load_buttons = new Button[3];
     private Button[] play_buttons = new Button[3];
 
-    final String DEFAULT_PLACEMENT_ID = "DEFAULT35839";
-    final String app_id = "58f8f64fcf684f7f4b00002e";
+    final String DEFAULT_PLACEMENT_ID = "DEFAULT33938";
+    final String app_id = "58dd5e7b76c1fbc01700007c";
     private final String[] placement_list = { DEFAULT_PLACEMENT_ID, "PPPPPPP26214", "QQQQQQQ63890" };
 
     @Override
@@ -120,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onAdEnd(@NonNull String placementReferenceId, boolean wasSuccessFulView, boolean wasCallToActionClicked) {
             Log.d(LOG_TAG, "onAdEnd: " + placementReferenceId + " ,wasSuccessfulView: " + wasSuccessFulView + " ,wasCallToActionClicked: " + wasCallToActionClicked);
+
         }
 
         @Override
