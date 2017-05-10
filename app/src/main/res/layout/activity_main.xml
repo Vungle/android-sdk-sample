@@ -2,6 +2,7 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,8 +23,8 @@
             android:layout_height="10dp"
             android:layout_gravity="center|top"
             android:layout_marginTop="5dp"
-            android:layout_weight="0.36"
-            android:scaleType="fitStart"
+            android:layout_weight="0.14"
+            android:scaleType="fitCenter"
             android:src="@drawable/vungle_logo" />
 
         <TextView
@@ -40,6 +41,8 @@
             android:layout_below="@id/vungle_app_id"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_green_button"
+            android:textColor="@color/buttonText"
             android:text="Init SDK" />
 
     </LinearLayout>
@@ -61,7 +64,6 @@
             android:layout_marginBottom="5dp"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
-            android:background="#caeeff"
             android:scaleType="fitCenter"
             android:orientation="vertical" >
 
@@ -84,16 +86,18 @@
 
             <Button
                 android:id="@+id/placement_play1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
-                android:text="play" />
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_blue_button"
+                android:gravity="center"
+                android:text="play"
+                android:textColor="@color/buttonText" />
 
         </LinearLayout>
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
             android:id="@+id/placement_view2"
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -101,7 +105,6 @@
             android:layout_marginBottom="5dp"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
-            android:background="#95dcfd"
             android:scaleType="fitCenter">
 
             <TextView
@@ -109,26 +112,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:gravity="left|top"
+                android:gravity="center"
                 android:text="placement ID 2" />
 
-            <Button
-                android:id="@+id/placement_load2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_below="@id/placement_id2"
-                android:layout_gravity="left|bottom"
-                android:layout_marginTop="20dp"
-                android:text="load" />
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:scaleType="fitCenter">
 
-            <Button
-                android:id="@+id/placement_play2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/placement_load2"
-                android:layout_toEndOf="@id/placement_load2"
-                android:layout_toRightOf="@id/placement_load2"
-                android:text="play" />
+                <Button
+                    android:id="@+id/placement_load2"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_blue_button"
+                    android:text="load"
+                    android:layout_weight="1.0"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/buttonText" />
+
+                <Button
+                    android:id="@+id/placement_play2"
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_blue_button"
+                    android:text="play"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/buttonText" />
+            </LinearLayout>
         </RelativeLayout>
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -139,7 +158,6 @@
             android:layout_marginBottom="5dp"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
-            android:background="#1d8fc4"
             android:scaleType="fitCenter">
 
             <TextView
@@ -147,26 +165,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:gravity="left|top"
+                android:gravity="center"
                 android:text="placement ID 3" />
 
-            <Button
-                android:id="@+id/placement_load3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_below="@id/placement_id3"
-                android:layout_gravity="left|bottom"
-                android:layout_marginTop="20dp"
-                android:text="load" />
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:scaleType="fitCenter">
 
-            <Button
-                android:id="@+id/placement_play3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/placement_load3"
-                android:layout_toEndOf="@id/placement_load3"
-                android:layout_toRightOf="@id/placement_load3"
-                android:text="play" />
+                <Button
+                    android:id="@+id/placement_load3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_blue_button"
+                    android:textColor="@color/buttonText"
+                    android:layout_weight="1.0"
+                    android:layout_marginRight="10dp"
+                    android:text="load" />
+
+                <Button
+                    android:id="@+id/placement_play3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_blue_button"
+                    android:textColor="@color/buttonText"
+                    android:layout_weight="1.0"
+                    android:layout_marginLeft="10dp"
+                    android:text="play" />
+            </LinearLayout>
         </RelativeLayout>
 
 
