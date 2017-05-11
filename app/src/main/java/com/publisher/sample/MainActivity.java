@@ -19,29 +19,34 @@ public class MainActivity extends AppCompatActivity {
     final VunglePub vunglePub = VunglePub.getInstance();
 
     // UI elements
+    Button initButton;
     private TextView[] placement_id_texts = new TextView[3];
     private Button[] load_buttons = new Button[3];
     private Button[] play_buttons = new Button[3];
 
-    final String DEFAULT_PLACEMENT_ID = "DEFAULT33938";
-    final String app_id = "58dd5e7b76c1fbc01700007c";
-    private final String[] placement_list = { DEFAULT_PLACEMENT_ID, "PPPPPPP26214", "QQQQQQQ63890" };
+    final String DEFAULT_PLACEMENT_ID = "DEFAULT35839";
+    final String app_id = "58f8f64fcf684f7f4b00002e";
+    private final String[] placement_list = { DEFAULT_PLACEMENT_ID, "PPPPPPP03346", "PPPPPPP99176" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initUIElements();
+    }
+
+    private void initSDK() {
         vunglePub.init(this, app_id, placement_list, new VungleInitListener() {
             @Override
             public void onSuccess() {
                 Log.d(LOG_TAG, "init success");
-
                 vunglePub.clearAndSetEventListeners(vungleDefaultListener);
 
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        for (int i = 1; i < 3; i++) {
+                        setButtonState(initButton, false);
+                        for (int i = 0; i < 3; i++) {
                             setButtonState(play_buttons[i], vunglePub.isAdPlayable(placement_list[i]));
                             setButtonState(load_buttons[i], !vunglePub.isAdPlayable(placement_list[i]));
                         }
@@ -54,11 +59,18 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(LOG_TAG, "init failure: " );
             }
         });
-
-        initUIElements();
     }
 
     private void initUIElements() {
+
+        initButton = (Button)findViewById(R.id.init_button);
+        initButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initSDK();
+            }
+        });
+
         placement_id_texts[0] = (TextView)findViewById(R.id.placement_id1);
         placement_id_texts[0].setText("Placement ID: " + placement_list[0]);
 
@@ -99,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (vunglePub != null && vunglePub.isInitialized()) {
                         if (vunglePub.isAdPlayable(placement_list[index])) {
+                            setButtonState(play_buttons[index], false);
                             vunglePub.playAd(placement_list[index], null);
                         }
                     }
