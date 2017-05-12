@@ -17,6 +17,10 @@
             android:layout_weight="3"
             android:scaleType="fitCenter"
             android:src="@drawable/vungle_logo" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lineColor" />
 
     <LinearLayout
         android:id="@+id/topMenuWrapper"
@@ -28,10 +32,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/lineColor" />
+
 
         <TextView
             android:id="@+id/vungle_app_id"
