@@ -37,6 +37,6 @@ dependencies {
             'io.reactivex:rxjava:1.2.0',
             'io.reactivex:rxandroid:1.2.1')
 
-    compile 'com.github.vungle:vungle-android-sdk:4f01705cc9'
+    compile 'com.github.Vungle:vungle-android-sdk:v5.0.0-beta.1-pr6'
 
 }
