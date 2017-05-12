@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
     private Button[] play_buttons = new Button[3];
 
     // Get your Vungle App ID and Placement ID information from Vungle Dashboard
-    final String DEFAULT_PLACEMENT_ID = "DEFAULT35839";
-    final String app_id = "58f8f64fcf684f7f4b00002e";
-    private final String[] placement_list = { DEFAULT_PLACEMENT_ID, "PPPPPPP03346", "PPPPPPP99176" };
+    final String app_id = "5916309cb46f6b5a3e00009c";
+    final String DEFAULT_PLACEMENT_ID = "DEFAULT32590";
+    private final String[] placement_list = { DEFAULT_PLACEMENT_ID, "TESTREW28799", "TESTINT07107" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
