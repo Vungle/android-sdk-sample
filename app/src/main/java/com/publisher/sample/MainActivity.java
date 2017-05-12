@@ -19,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
     final VunglePub vunglePub = VunglePub.getInstance();
 
     // UI elements
-    Button initButton;
-    private TextView[] placement_id_texts = new TextView[3];
+    private Button initButton;
     private Button[] load_buttons = new Button[3];
     private Button[] play_buttons = new Button[3];
 
@@ -62,14 +61,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initUIElements() {
+        TextView vungle_app_id = (TextView)findViewById(R.id.vungle_app_id);
+        vungle_app_id.setText("App ID: " + app_id);
 
         initButton = (Button)findViewById(R.id.init_button);
         initButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 initSDK();
+                setButtonState(initButton, false);
             }
         });
+
+
+        TextView[] placement_id_texts = new TextView[3];
 
         placement_id_texts[0] = (TextView)findViewById(R.id.placement_id1);
         placement_id_texts[0].setText("Placement ID: " + placement_list[0]);
