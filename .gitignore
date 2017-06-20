@@ -63,3 +63,5 @@ captures/
 /captures
 .externalNativeBuild
 
+
+.idea/*.xml
