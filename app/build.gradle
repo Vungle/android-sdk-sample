@@ -10,7 +10,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -28,15 +27,11 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 
-    // Multidex
-    compile 'com.android.support:multidex:1.0.1'
-
     compile('javax.inject:javax.inject:1',
             'com.google.dagger:dagger:2.7',
             'de.greenrobot:eventbus:2.2.1',
             'io.reactivex:rxjava:1.2.0',
             'io.reactivex:rxandroid:1.2.1')
 
-    compile 'com.github.Vungle:vungle-android-sdk:v5.0.0-beta.1-pr6'
-
+    compile 'com.github.vungle:vungle-android-sdk:v5.1.0-pr4'
 }
