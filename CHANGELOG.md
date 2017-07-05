@@ -1,8 +1,9 @@
 ## Changelog
 
-### VERSION 5.0.0-Beta 1
-* Placements feature implemented.
-* Cache improvements.
+### VERSION 5.1.0
+* PLaunched new Placements feature.
+* Added Native Flex View ad unit.
+* Added Moat Viewability technology to provide viewership data on ads.
 
 ### VERSION 4.0.3
 * Added support for Android Nougat (Android v7.0)
